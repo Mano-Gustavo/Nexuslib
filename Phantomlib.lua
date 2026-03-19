@@ -53,6 +53,7 @@ local Library = {
     Toggles  = {},
     Options  = {},
     Signals  = {},
+    Tabs     = {},
     Unloaded = false,
     Toggled  = false,
 
@@ -1346,6 +1347,9 @@ function Library:CreateWindow(cfg)
         local LeftCol  = MakeCol(0,   6, 0.5, -9)
         local RightCol = MakeCol(0.5, 3, 0.5, -9)
 
+        -- ── Tab API (declarado antes do SelectTab para evitar referência nil) ─
+        local Tab = { _left = LeftCol, _right = RightCol, Groupboxes = {} }
+
         -- ── Selecionar tab ────────────────────────────────
         local function SelectTab()
             if ActivePg  then ActivePg.Visible = false end
@@ -1371,9 +1375,6 @@ function Library:CreateWindow(cfg)
         end)
 
         if not ActivePg then SelectTab() end
-
-        -- ── Tab API ───────────────────────────────────────
-        local Tab = { _left = LeftCol, _right = RightCol, Groupboxes = {} }
 
         local function MakeGB(col, gbName)
             gbName = tostring(gbName)
