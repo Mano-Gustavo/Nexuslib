@@ -55,7 +55,7 @@ A library é carregada remotamente via HttpGet. Use sempre o link RAW do GitHub.
 ```lua
 -- Carregamento remoto (recomendado)
 local Lib = loadstring(game:HttpGet(
-    "https://https://raw.githubusercontent.com/Mano-Gustavo/Nexuslib/refs/heads/main/NexusLib.lua"
+    "https://raw.githubusercontent.com/Mano-Gustavo/Nexuslib/refs/heads/main/NexusLib.lua"
 ))()
 
 -- Carregamento local (para teste)
@@ -518,7 +518,7 @@ end
 
 ```lua
 local Lib = loadstring(game:HttpGet(
-    "https://https://raw.githubusercontent.com/Mano-Gustavo/Nexuslib/refs/heads/main/NexusLib.lua"
+    "https://raw.githubusercontent.com/Mano-Gustavo/Nexuslib/refs/heads/main/NexusLib.lua"
 ))()
 
 local Players = game:GetService("Players")
